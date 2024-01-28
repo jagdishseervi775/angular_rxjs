@@ -1,0 +1,40 @@
+button{
+    padding: 5px 20px;
+    // border-radius: 10px;
+        
+}
+
+.reaction-button i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.reaction-button:hover i {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.2) rotate(-10deg);
+    }
+    60% {
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
